@@ -13,32 +13,24 @@ CELERY_MONGO_PASSWORD： 密码
 CELERY_MONGO_AUTH_SOURCE：MongoDB 认证源，默认为"admin"  
 CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合  
  
-# crontab任务  
-  111111  
-  
-{   "name" : "crontab任务", 
-    "task" : "test", 
-    "kwargs" : {
-
-    }, 
-    "total_run_count" : 9, 
-    "args" : [
-        16, 
-        16
-    ], 
-    "enabled" : true, 
-    "options" : {
-
-    }, 
-    "crontab" : {
-        "month_of_year" : "*", 
-        "day_of_week" : "*", 
-        "hour" : 16, 
-        "minute" : 28, 
-        "day_of_month" : "*"
-    }, 
-    "last_run_at" : ISODate("2017-10-08T08:28:00.003+0000")
-}
+crontab任务::
+    {
+     "name": "crontab任务",
+     "task": "test",
+     "kwargs": {},
+     "total_run_count": 9,
+     "args": [16, 16],
+     "enabled": true,
+     "options": {},
+     "crontab": {
+       "month_of_year": "*",
+       "day_of_week": "*",
+       "hour": 16,
+       "minute": 28,
+       "day_of_month": "*"
+     },
+     "last_run_at": ISODate("2017-10-08T08:28:00.003+0000")
+  }
 
 # interval任务  
   
