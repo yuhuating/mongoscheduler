@@ -1,7 +1,7 @@
 # mongoscheduler
 
 
-针对MongoDB的celery beat scheduler
+针对MongoDB的celery beat scheduler，支持crontab任务和Interval任务
 
 # 配置选项：  
 CELERY_MONGO_URI：MongoDB连接字符串，添加此配置参数后，下面的（HOST, PORT....）可以不填，相同的作用；  
@@ -13,7 +13,6 @@ CELERY_MONGO_PASSWORD： 密码
 CELERY_MONGO_AUTH_SOURCE：MongoDB 认证源，默认为"admin"  
 CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合  
  
-
 
 # crontab任务
 
@@ -35,30 +34,22 @@ CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合
       "last_run_at": ISODate("2017-10-08T08:28:00.003+0000")
     }
 
+# Interval任务
 
-# Interval
-
-    { 
-    "name" : "interval任务", 
-    "task" : "test", 
-    "kwargs" : {
-
-    }, 
-    "total_run_count" : 75262.0, 
-    "args" : [
-
-    ], 
-    "enabled" : true, 
-    "options" : {
-
-    }, 
-    "interval" : {
-        "every" : 10, 
-        "period" : "seconds"
-    }, 
-    "last_run_at" : ISODate("2017-10-09T01:12:47.971+0000")
+    {
+      "name": "interval任务",
+      "task": "test",
+      "kwargs": {},
+      "total_run_count": 75262.0,
+      "args": [],
+      "enabled": true,
+      "options": {},
+      "interval": {
+        "every": 10,
+        "period": "seconds"
+      },
+      "last_run_at": ISODate("2017-10-09T01:12:47.971+0000")
     }
-
 
 # enabled  
   
