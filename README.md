@@ -1,19 +1,19 @@
 # mongoscheduler
-celery beat scheduler for mongodb
+
 
 针对MongoDB的celery beat scheduler
 
 # 配置选项：
-CELERY_MONGO_URI：MongoDB连接字符串，添加此配置参数后，下面的（HOST, PORT....）可以不填，相同的作用；
-CELERY_MONGO_HOST：主机地址
-CELERY_MONGO_PORT：端口
-CELERY_MONGO_DBNAME： 数据库
-CELERY_MONGO_USERNAME： 用户名
-CELERY_MONGO_PASSWORD： 密码
-CELERY_MONGO_AUTH_SOURCE：MongoDB 认证源，默认为"admin"
-CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合
+CELERY_MONGO_URI：MongoDB连接字符串，添加此配置参数后，下面的（HOST, PORT....）可以不填，相同的作用；  
+CELERY_MONGO_HOST：主机地址  
+CELERY_MONGO_PORT：端口  
+CELERY_MONGO_DBNAME： 数据库  
+CELERY_MONGO_USERNAME： 用户名  
+CELERY_MONGO_PASSWORD： 密码  
+CELERY_MONGO_AUTH_SOURCE：MongoDB 认证源，默认为"admin"  
+CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合  
 
-# crontab任务
+# crontab任务  
 { 
     "_id" : ObjectId("59cf4496648baed7ab9cb526"), 
     "name" : "crontab任务", 
