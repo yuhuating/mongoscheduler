@@ -54,3 +54,28 @@ CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合
 # enabled  
   
 enabled为False的时候，计划任务将不会执行；
+
+# 使用方法  
+在celery的配置中添加CELERYBEAT_SCHEDULER选项，如  
+
+coding:utf-8  
+from mongoscheduler import MongodbScheduler  
+
+BROKER_URL = 'redis://192.168.99.100:6379/1'  
+CELERY_RESULT_BACKEND = 'redis://192.168.99.100:6379/1'  
+CELERY_TASK_SERIALIZER = 'pickle'  
+CELERY_ACCEPT_CONTENT = ['pickle']  
+CELERY_RESULT_SERIALIZER = 'pickle'  
+CELERY_TASK_RESULT_EXPIRES = 5  
+CELERY_MAX_CACHED_RESULTS = 5  
+CELERY_TIMEZONE = 'Asia/Shanghai'  
+**CELERYBEAT_SCHEDULER = MongodbScheduler  
+CELERY_MONGO_URI = None   
+CELERY_MONGO_HOST = "192.168.99.100"  
+CELERY_MONGO_PORT = 27017  
+CELERY_MONGO_DBNAME = "dbname"  
+CELERY_MONGO_USERNAME = "username"  
+CELERY_MONGO_PASSWORD = "********"  
+CELERY_MONGO_AUTH_SOURCE = "admin"  
+CELERY_MONGO_COLLECTION = "celery_schedule"**  
+
