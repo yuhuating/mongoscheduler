@@ -13,7 +13,8 @@ CELERY_MONGO_PASSWORD： 密码
 CELERY_MONGO_AUTH_SOURCE：MongoDB 认证源，默认为"admin"  
 CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合  
  
-# crontab任务    
+# crontab任务  
+
 { 
     "_id" : ObjectId("59cf4496648baed7ab9cb526"), 
     "name" : "crontab任务", 
@@ -41,6 +42,7 @@ CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合
 }
 
 # interval任务  
+
 { 
     "_id" : ObjectId("59cf4496648baed7ab9cb524"), 
     "name" : "interval任务", 
@@ -65,4 +67,5 @@ CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合
 
 
 # enabled  
+
 enabled为False的时候，计划任务将不会执行；
