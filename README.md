@@ -55,6 +55,29 @@ crontab任务::
     "last_run_at" : ISODate("2017-10-09T01:12:47.971+0000")
 }
 
+Interval::
+
+    { 
+    "name" : "interval任务", 
+    "task" : "test", 
+    "kwargs" : {
+
+    }, 
+    "total_run_count" : 75262.0, 
+    "args" : [
+
+    ], 
+    "enabled" : true, 
+    "options" : {
+
+    }, 
+    "interval" : {
+        "every" : 10, 
+        "period" : "seconds"
+    }, 
+    "last_run_at" : ISODate("2017-10-09T01:12:47.971+0000")
+}
+
 
 # enabled  
   
