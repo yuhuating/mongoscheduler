@@ -76,7 +76,7 @@ crontab任务::
         "period" : "seconds"
     }, 
     "last_run_at" : ISODate("2017-10-09T01:12:47.971+0000")
-}
+    }
 
 
 # enabled  
