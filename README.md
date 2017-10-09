@@ -14,10 +14,9 @@ CELERY_MONGO_AUTH_SOURCE：MongoDB 认证源，默认为"admin"
 CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合  
  
 # crontab任务  
+  111111  
   
-{ 
-    "_id" : ObjectId("59cf4496648baed7ab9cb526"), 
-    "name" : "crontab任务", 
+{   "name" : "crontab任务", 
     "task" : "test", 
     "kwargs" : {
 
@@ -44,7 +43,6 @@ CELERY_MONGO_COLLECTION：存放scheduler的MongoDB集合
 # interval任务  
   
 { 
-    "_id" : ObjectId("59cf4496648baed7ab9cb524"), 
     "name" : "interval任务", 
     "task" : "test", 
     "kwargs" : {
